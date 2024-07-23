@@ -302,6 +302,7 @@ img {
     /* width: 1200px; */
     display: flex;
     margin-top: 20px;
+    margin-bottom: 30px;
     align-items: center;
     list-style-type: none;
     justify-content: space-between;
@@ -330,6 +331,7 @@ img {
 
 .pc-info-li:last-child {
     margin-right: 0;
+    margin-bottom: 0;
 }
 
 .memory-h2 {
