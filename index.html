@@ -88,6 +88,16 @@
                 totalMemory.textContent = `${deviceMemory}GB`;
                 freeMemory.textContent = `${freeMem.toFixed(1)}GB`;
                 usedMemory.textContent = `${usedMem.toFixed(1)}GB`;
+            } else if (typeof window.performance.memory !== 'undefined') {
+                // Fallback for macOS/iOS using performance.memory
+                const memoryInfo = window.performance.memory;
+                const totalMem = memoryInfo.jsHeapSizeLimit / (1024 * 1024 * 1024); // Convert to GB
+                const usedMem = memoryInfo.usedJSHeapSize / (1024 * 1024 * 1024); // Convert to GB
+                const freeMem = totalMem - usedMem;
+
+                totalMemory.textContent = `${totalMem.toFixed(1)}GB`;
+                freeMemory.textContent = `${freeMem.toFixed(1)}GB`;
+                usedMemory.textContent = `${usedMem.toFixed(1)}GB`;
             } else {
                 totalMemory.textContent = "Unknown";
                 freeMemory.textContent = "Unknown";
