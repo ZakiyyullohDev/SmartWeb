@@ -303,6 +303,7 @@ img {
     display: flex;
     margin-top: 20px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
     align-items: center;
     list-style-type: none;
     justify-content: space-between;
