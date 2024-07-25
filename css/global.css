@@ -114,6 +114,7 @@ img {
     margin-bottom: 20px;
     padding-bottom: 13px;
     border: 1px solid #DADADA;
+    transition: all 0.3s ease;
 }
 
 .email-input::placeholder {
@@ -140,6 +141,7 @@ img {
     margin-bottom: 20px;
     padding-bottom: 13px;
     border: 1px solid #DADADA;
+    transition: all 0.3s ease;
 }
 
 .password-input::placeholder {
@@ -302,7 +304,6 @@ img {
     /* width: 1200px; */
     display: flex;
     margin-top: 20px;
-    margin-bottom: 30px;
     flex-wrap: wrap;
     align-items: center;
     list-style-type: none;
@@ -317,6 +318,7 @@ img {
     padding-top: 10px;
     text-align: center;
     margin-right: 30px;
+    margin-bottom: 30px;
     align-items: center;
     border-radius: 10px;
     flex-direction: column;
@@ -330,11 +332,96 @@ img {
     box-shadow: 0px 26px 70px 1px rgba(0, 0, 0, 0.4);
 }
 
-.pc-info-li:last-child {
+.pc-info-li:nth-child(3) {
     margin-right: 0;
     margin-bottom: 0;
 }
 
 .memory-h2 {
     margin-bottom: 20px;
+}
+
+.success {
+    border: 1px solid greenyellow;
+    /* box-shadow: 3px 4px 29px 3px rgba(0, 255, 8, 0.71);
+    -webkit-box-shadow: 3px 4px 29px 3px rgba(0, 255, 8, 0.71); -moz-box-shadow: 3px 4px 29px 3px rgba(0, 255, 8, 0.71); */
+}
+
+.error {
+    border: 1px solid tomato;
+    /* box-shadow: 3px 4px 29px 3px rgba(255, 0, 0, 0.71);
+    -webkit-box-shadow: 3px 4px 29px 3px rgba(255, 0, 0, 0.71); -moz-box-shadow: 3px 4px 29px 3px rgba(255, 0, 0, 0.71); */
+}
+
+.already-exist {
+    top: 20px;
+    width: 350px;
+    right: -350px;
+    height: 120px;
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #fff;
+    border: 3px solid tomato;
+    justify-content: space-between;
+}
+
+.animation{
+    animation: slideToLeft 2s ease forwards;
+}
+
+.already-exist-div-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.error-icon {
+    color: tomato;
+    font-size: 44px;
+    margin-right: 40px;
+}
+
+.already-exist-title {
+    color: tomato;
+    font-size: 24px;
+    text-align: center;
+}
+
+.already-exist-info {
+    text-align: center;
+}
+
+.already-exist.hidden {
+    display: none;
+}
+
+@keyframes slideToLeft {
+    from {
+        right: -350px;
+    }
+    to {
+        right: 20px;
+    }
+}
+
+.success-div {
+    top: 20px;
+    width: 350px;
+    right: -350px;
+    height: 120px;
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #fff;
+    justify-content: space-between;
+    border: 3px solid greenyellow;
 }

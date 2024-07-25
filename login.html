@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="css/global.css">
+    <link rel="icon" href="logo.png">
 </head>
 <body>
 
@@ -37,8 +38,19 @@
             <img src="Group 1.png" class="right-card-img" alt="img" width="469" height="347">
         </div>
     </div>
-
+    <div class="already-exist" id="alreadyExist">
+        <div class="already-exist-div-top">
+            <i class="ri-error-warning-line error-icon"></i>
+            <h3 class="already-exist-title" id="alreadyExistTitle">Already Exist</h3>
+        </div>
+        <p class="already-exist-info" id="alreadyExistInfo">This User Is Already Exist user </p>
+    </div>
     
-    <script src="js/app.js"></script>
+    <script src="js/login.js"></script>
+        <script>
+        document.getElementById('alreadyExist').addEventListener('click', function() {
+            this.classList.add('hidden');
+        });
+    </script>
 </body>
 </html>

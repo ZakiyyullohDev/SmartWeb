@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Page</title>
     <link rel="stylesheet" href="css/global.css">
+    <link rel="icon" href="logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-
+    
     <div class="container">
         <div class="register-card-left">
             <h1 class="welcome-title">Welcome Back</h1>
             <p class="welocme-second-title">Welcome back! Please enter your details.</p>
-            <label for="emailInput" class="email-label">Last Name</label>
+            <label for="firstNameInput" class="email-label">First Name</label>
+            <input class="email-input" type="email" id="firstNameInput" placeholder="Enter Your First Name:">
+            <label for="lastNameInput" class="email-label">Last Name</label>
             <input class="email-input" type="email" id="lastNameInput" placeholder="Enter Your Last Name:">
-            <label for="emailInput" class="email-label">Name</label>
-            <input class="email-input" type="email" id="nameInput" placeholder="Enter Your Name:">
             <label for="emailInput" class="email-label">E-mail</label>
             <input class="email-input" type="email" id="emailInput" placeholder="Enter Your Email:">
             <label for="passwordInput" class="password-label">Password</label>
@@ -33,7 +35,7 @@
             </button>
             <div class="dont-have-account-wrapper">
                 <p class="dont-have-account-p">Don’t have an account? </p>
-                <a href="sign-up.html" class="sign-up-link">Sign Up</a>
+                <a href="login.html" class="sign-up-link">Login</a>
             </div>
             <p class="author">&copy; ZakiyyullohDev</p>
         </div>
@@ -42,6 +44,16 @@
         </div>
     </div>
     
-    <script src="js/app.js"></script>
+    <div class="already-exist" id="alreadyExist">
+        <h3 class="already-exist-title" id="alreadyExistTitle">Already Exist</h3>
+        <p class="already-exist-info" id="alreadyExistInfo">This User Is Already Exist user </p>
+    </div>
+    
+    <script src="js/signup.js"></script>
+    <script>
+        document.getElementById('alreadyExist').addEventListener('click', function() {
+            this.classList.add('hidden');
+        });
+    </script>
 </body>
 </html>
